@@ -1,13 +1,14 @@
 const HTTP = require('http');
+//const TWITTER = require('twitter');
 
 const PORT1 = 7000;
 const PORT2 = 7500;
 
-
+let goodSaying = ["Your Are Smart.", "You smell good.","You Are A Beautiful Butterfly.", "Peaches are good.  You are like a peach." ]
 
 function somethingGood(request, response) 
 {
- 	response.end("You Are A Beautiful Butterfly");
+ 	response.end(goodSaying[Math.floor(Math.random()* goodSaying.length)]);
 }
 
 function somethingBad(request, response) 
